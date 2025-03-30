@@ -11,6 +11,6 @@ final class IndexController
     #[Route('/')]
     public function indexAction() : Response
     {
-        return new Response('Hello world!');
+        return new Response('Hello world! Preview.');
     }
 }
