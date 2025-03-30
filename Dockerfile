@@ -11,7 +11,9 @@ COPY . /app
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
+    libcurl4-openssl-dev pkg-config libssl-dev \
     && docker-php-ext-install pdo_mysql zip
+
 
 # Install MongoDB extension
 RUN pecl install mongodb && docker-php-ext-enable mongodb
